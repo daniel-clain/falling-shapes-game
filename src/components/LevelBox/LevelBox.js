@@ -1,33 +1,33 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableHighlight, Image } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
 
 const LevelBox = props => {
 
   const padlockImage = <Image style={styles.padlockImage} resizeMode='contain' source={require('./../../images/lock.png')}/>
+
 
   let starImages = [];
   for(let i = 0; i < props.level.stars; i++) {
     starImages.push(
     <Image 
       style={styles.starImage} 
-      resizeMode='contain' 
+      resizeMode='contain'
       key={i}
       source={require('./../../images/star.png')} 
     />)
   }
   const starsViewBlock = <View style={styles.starsViewBlock}>{starImages}</View>
 
-  console.log('stars ', starImages)
 
   return (
-    <TouchableHighlight 
+    <TouchableOpacity 
       style={[styles.levelBoxTouchable, props.level.locked ? styles.levelLocked : '']} 
-      onPress={() => props.clickHandler(props.level)}>
+      onPress={() => props.levelSelectHandler(props.level)}>
       <View style={styles.levelBoxContent}>
         <Text style={styles.levelBoxText}>{props.level.name}</Text>
         {props.level.locked ? padlockImage : starsViewBlock}
       </View>
-    </TouchableHighlight>
+    </TouchableOpacity>
   );
 }
 

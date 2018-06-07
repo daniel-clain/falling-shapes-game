@@ -12,12 +12,48 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Daniel\Desktop\PRACTICE PROJECTS\falling-shapes-game\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.55.4\jars\libs\infer-annotations-4.0.jar"
+        jar="C:\Users\Daniel\Desktop\PRACTICE PROJECTS\falling-shapes-game\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
-        <dex dex="C:\Users\Daniel\Desktop\PRACTICE PROJECTS\falling-shapes-game\android\app\build\intermediates\pre-dexed\debug\infer-annotations-4.0_7637b72518340be79f78b6b43462b05089188270.jar" />
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="C:\Users\Daniel\Desktop\PRACTICE PROJECTS\falling-shapes-game\android\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1_1b426491bd10d708f775e8a148786710bef2bc61.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Daniel\Desktop\PRACTICE PROJECTS\falling-shapes-game\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.55.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="0e9d3a3d3a781fe8fe55b743c397ae7f097c21b0">
+        <dex dex="C:\Users\Daniel\Desktop\PRACTICE PROJECTS\falling-shapes-game\android\app\build\intermediates\pre-dexed\debug\com.facebook.react-react-native-0.55.2_acb27f2b7fed45dd3ea9dea0ce2c08b15ec4d921.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Daniel\Desktop\PRACTICE PROJECTS\falling-shapes-game\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-base\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
+        <dex dex="C:\Users\Daniel\Desktop\PRACTICE PROJECTS\falling-shapes-game\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-base-1.3.0_1a68f8e12e2fd677d1a07e6b0afe2c35de8b4905.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Daniel\Desktop\PRACTICE PROJECTS\falling-shapes-game\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fbcore\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
+        <dex dex="C:\Users\Daniel\Desktop\PRACTICE PROJECTS\falling-shapes-game\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-fbcore-1.3.0_67466e605a0f82a534372b5a665530e0ef90774a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.0\5871fb60dc68d67da54a663c3fd636a10a532948\jsr305-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="C:\Users\Daniel\Desktop\PRACTICE PROJECTS\falling-shapes-game\android\app\build\intermediates\pre-dexed\debug\jsr305-3.0.0_b8d6215bb6ad7bf0f83c8ed1bc08e154aaa54510.jar" />
     </item>
     <item
         is-multidex="false"
@@ -36,15 +72,6 @@
         revision="23.0.1"
         sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
         <dex dex="C:\Users\Daniel\Desktop\PRACTICE PROJECTS\falling-shapes-game\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-fresco-1.3.0_0b21204ded027d72fee1d1182041d0b57350403e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Daniel\Desktop\PRACTICE PROJECTS\falling-shapes-game\android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="C:\Users\Daniel\Desktop\PRACTICE PROJECTS\falling-shapes-game\android\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1_1b426491bd10d708f775e8a148786710bef2bc61.jar" />
     </item>
     <item
         is-multidex="false"
@@ -75,6 +102,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\Daniel\Desktop\PRACTICE PROJECTS\falling-shapes-game\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.55.2\jars\libs\infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="C:\Users\Daniel\Desktop\PRACTICE PROJECTS\falling-shapes-game\android\app\build\intermediates\pre-dexed\debug\infer-annotations-4.0_9d96312197a20ce7195ae6bfe872a683cc85d79c.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\Daniel\Desktop\PRACTICE PROJECTS\falling-shapes-game\android\app\build\intermediates\exploded-aar\com.facebook.soloader\soloader\0.1.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -90,15 +126,6 @@
         revision="23.0.1"
         sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
         <dex dex="C:\Users\Daniel\Desktop\PRACTICE PROJECTS\falling-shapes-game\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-okhttp3-1.3.0_98b850cb20d6eea86dfe685bc0b382d2184e5ef1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Daniel\Desktop\PRACTICE PROJECTS\falling-shapes-game\android\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-base\1.3.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
-        <dex dex="C:\Users\Daniel\Desktop\PRACTICE PROJECTS\falling-shapes-game\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-imagepipeline-base-1.3.0_1a68f8e12e2fd677d1a07e6b0afe2c35de8b4905.jar" />
     </item>
     <item
         is-multidex="false"
@@ -120,39 +147,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Daniel\Desktop\PRACTICE PROJECTS\falling-shapes-game\android\app\build\intermediates\exploded-aar\com.facebook.fresco\fbcore\1.3.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
-        <dex dex="C:\Users\Daniel\Desktop\PRACTICE PROJECTS\falling-shapes-game\android\app\build\intermediates\pre-dexed\debug\com.facebook.fresco-fbcore-1.3.0_67466e605a0f82a534372b5a665530e0ef90774a.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
         <dex dex="C:\Users\Daniel\Desktop\PRACTICE PROJECTS\falling-shapes-game\android\app\build\intermediates\pre-dexed\debug\bolts-tasks-1.4.0_cc8dc05f37a2c344f9464bbeb7ddf8d7a06bceae.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Daniel\Desktop\PRACTICE PROJECTS\falling-shapes-game\android\app\build\intermediates\exploded-aar\com.facebook.react\react-native\0.55.4\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="e31331bdf6b5952badadbfc171f04b95c55d3b16">
-        <dex dex="C:\Users\Daniel\Desktop\PRACTICE PROJECTS\falling-shapes-game\android\app\build\intermediates\pre-dexed\debug\com.facebook.react-react-native-0.55.4_50047c82c79971c0971aa174494f90c8b4886ca6.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Daniel\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.0\5871fb60dc68d67da54a663c3fd636a10a532948\jsr305-3.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
-        <dex dex="C:\Users\Daniel\Desktop\PRACTICE PROJECTS\falling-shapes-game\android\app\build\intermediates\pre-dexed\debug\jsr305-3.0.0_b8d6215bb6ad7bf0f83c8ed1bc08e154aaa54510.jar" />
     </item>
     <item
         is-multidex="false"

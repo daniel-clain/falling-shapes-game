@@ -17,6 +17,10 @@ describe('LevelSelect', () => {
     })
 
     describe('levelBoxClicked()', () => {
+        beforeAll(() => {
+            wrapper = shallow(<LevelSelect/>)
+            wrapper.find('LevelBox').first().props.onPress()
+        })
         xit('should navigate to in game if unlocked', () => {
             
         })

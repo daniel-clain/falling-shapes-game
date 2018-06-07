@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-export class InGame extends Component {
+export class InGame extends Component {  
+  level = this.props.navigation.getParam('level')
+
+  static navigationOptions = ({ navigation }) => ({
+      title: navigation.state.params.level.name,
+      gesturesEnabled: false
+  });
+
   render() {
-    const level = this.props.navigation.getParam('level')
     return (
       <View style={styles.inGame}>
-        <Text style={styles.heading}>{level.name}</Text>
       </View>
     );
   }

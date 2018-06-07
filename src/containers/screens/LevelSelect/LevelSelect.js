@@ -4,6 +4,10 @@ import GameTitle from './../../../components/GameTitle';
 import LevelBox from './../../../components/LevelBox';
 
 export class LevelSelect extends Component {
+
+  static navigationOptions = {
+    title: 'Falling Shapes Game',
+  };
   
   render() {
     const levels = [
@@ -38,41 +42,40 @@ export class LevelSelect extends Component {
         locked: true,
       }
     ];
+    
     const levelBoxClicked = level => {
       if(level.locked) return;
       this.props.navigation.navigate('InGame', {level: level})
     };
+
     const levelBoxes = levels.map((level, index) => 
-      <LevelBox key={index} level={level} clickHandler={levelBoxClicked}/>
+      <LevelBox key={index} levelSelectHandler={levelBoxClicked} level={level} />
     )
-    console.log(this.props);
 
 
     return (
-      <View style={styles.levelSelect}>
-        <GameTitle/>
-        <Text style={styles.heading}>Level Select</Text>
+      <View style={styles.screenPadding}>
+        <Text style={styles.levelSelectTitle}>Level Select</Text>
         <View style={styles.levelBoxesContainer}>{levelBoxes}</View>
-        
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-    levelSelect: {
-      padding: '5%',
-    },
-    heading: {      
-      fontSize: 18,
-      textAlign: 'left',
-      marginBottom: 10,
-      color: '#222'
-    },
-    levelBoxesContainer:{
-      display: 'flex',
-      flexWrap: 'wrap',
-      flexDirection: 'row',
-      justifyContent: 'space-between'
-    }
+  screenPadding: {
+    padding: 20
+  },
+  levelSelectTitle: {
+    textAlign: 'center',
+    fontSize: 22,
+    marginVertical: 20,
+    color: '#55b'
+  },
+  levelBoxesContainer:{
+    display: 'flex',
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  }
 })
