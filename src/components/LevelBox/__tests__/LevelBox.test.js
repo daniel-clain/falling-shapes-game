@@ -38,13 +38,13 @@ describe('Level Box', () => {
     })
 
 
-    describe('Clicking an unlocked box', () => {
+    xdescribe('Clicking an unlocked box', () => {
         xit('should take you to the ingame view for that level', () => {
         
         })
     })
 
-    describe('Clicked a locked level', () => {
+    xdescribe('Clicked a locked level', () => {
         xit('should not take you in game', () => {
         
         })

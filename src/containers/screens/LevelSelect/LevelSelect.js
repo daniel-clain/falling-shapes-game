@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import GameTitle from './../../../components/GameTitle';
 import LevelBox from './../../../components/LevelBox';
 
 export class LevelSelect extends Component {
@@ -64,7 +63,7 @@ export class LevelSelect extends Component {
 
 const styles = StyleSheet.create({
   screenPadding: {
-    padding: 20
+    padding: 10
   },
   levelSelectTitle: {
     textAlign: 'center',
