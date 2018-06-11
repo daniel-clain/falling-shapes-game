@@ -1,0 +1,8 @@
+{
+    "jsx": {
+        "brace_style": "collapse,preserve-inline"
+    },
+    "js": {
+        "brace_style": "collapse,preserve-inline"
+    }
+}

@@ -9,25 +9,38 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.4",
     "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.9.1",
     "jest": "^23.1.0",
     "jest-react-native": "^18.0.0",
     "react-addons-test-utils": "^15.6.2",
     "react-dom": "^16.4.0",
-    "react-test-renderer": "16.3.1",
-    "prop-types": "^15.6.1"
+    "react-test-renderer": "16.3.1"
   },
   "scripts": {
     "start": "react-native start",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "test": "jest"
+    "test": "set NODE_ENV=test & jest --detectOpenHandles"
   },
   "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
     "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
-        "<rootDir>/assetsTransformer.js",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/assetsTransformer.js",
       "\\.(css|less)$": "<rootDir>/assetsTransformer.js"
     },
+    "transform": {
+      "^.+\\.jsx$": "babel-jest",
+      "^.+\\.js$": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|react-navigation)"
+    ],
     "preset": "react-native",
     "testMatch": [
       "**/?(*.)test.js?(x)"
@@ -40,8 +53,9 @@
     ]
   },
   "dependencies": {
+    "prop-types": "^15.6.1",
     "react": "^16.3.1",
-    "react-native": "0.55.2",
+    "react-native": "^0.55.4",
     "react-navigation": "^2.2.0"
   }
 }

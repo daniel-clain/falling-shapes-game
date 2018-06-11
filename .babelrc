@@ -4,6 +4,25 @@
     "react-native"
   ],
   "env": {
+    "test": {
+      "presets":[
+        ["es2015", { "modules": false }],
+        "react",
+        "stage-0",
+        [
+          "env",
+          {
+              "modules": "commonjs",
+              "useBuiltIns": "usage",
+              "debug": false
+          }
+        ]
+      ],
+      "plugins": [
+        "transform-es2015-modules-commonjs",
+        "dynamic-import-node"
+      ]
+    },
     "development": {
       "plugins": [
         "transform-react-jsx-source"

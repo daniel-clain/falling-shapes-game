@@ -1,0 +1,32 @@
+{
+    "parser": "babel-eslint",
+    "extends": "airbnb",
+    "env": {
+        "jest": true
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "rules": {
+        "linebreak-style": [0, "error", "windows"],
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "react/prop-types": ["error", { "ignore": ["navigation"] }],
+        "react/no-unused-prop-types": [1]
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [
+                    ".js",
+                    ".jsx"
+                ]
+            },
+            "babel-module": {
+                "extensions": [".js", ".jsx"]
+              }
+        }
+    }
+}

@@ -1,15 +1,14 @@
-import React from 'react';
 import { createStackNavigator } from 'react-navigation';
-import { LevelSelectScreen, InGameScreen } from './src/containers/screens';
+import LevelSelect from './src/containers/screens/LevelSelect';
+import InGame from './src/containers/screens/InGame';
 
 export default createStackNavigator({
-    'LevelSelect': {
-      screen: LevelSelectScreen
-    },
-    'InGame': {
-      screen: InGameScreen
-    },
-  }, {
-    initialRouteName: 'LevelSelect',
-  }
-);
+  InGame: {
+    screen: InGame,
+  },
+  LevelSelect: {
+    screen: LevelSelect,
+  },
+}, {
+  initialRouteName: 'LevelSelect',
+});

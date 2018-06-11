@@ -1,0 +1,72 @@
+{
+	"levels": [
+		{
+			"name": "Level 1",
+			"stars": 3,
+			"locked": false,
+			"shapeColors": [
+				"yellow"
+			],
+			"shapeTypes": [
+				"triangle"
+			],
+			"shapeFallSpeed": 9,
+			"shapeDispenseSpeed": 3,
+			"startingTime": 60,
+			"pointsForOneStar": null,
+			"pointsForTwoStars": null,
+			"pointsForThreeStars": null,
+			"levelInstructions": [
+				"Gain as many poins as you can before the time runs out.",
+				"Collecting a yellow shapes will give you 1 point.",
+				"Collecting a triangle will make all shapes change lane."
+			]
+		},
+		{
+			"name": "Level 2",
+			"stars": 3,
+			"locked": false,
+			"shapeTypes": [
+				"triangle",
+				"circle",
+				"square",
+				"star"
+			],
+			"shapeColors": [
+				"yellow",
+				"red",
+				"blue",
+				"green"
+			],
+			"shapeFallSpeed": 9,
+			"shapeDispenseSpeed": 3,
+			"startingTime": 60,
+			"pointsForOneStar": null,
+			"pointsForTwoStars": null,
+			"pointsForThreeStars": null,
+			"levelInstructions": [
+				"Play for as long as you can to see if you can get a high score"
+			]
+		},
+		{
+			"name": "Level 3",
+			"stars": 0,
+			"locked": true
+		},
+		{
+			"name": "Level 4",
+			"stars": 0,
+			"locked": true
+		},
+		{
+			"name": "Level 5",
+			"stars": 0,
+			"locked": true
+		},
+		{
+			"name": "Level 6",
+			"stars": 0,
+			"locked": true
+		}
+	]
+}

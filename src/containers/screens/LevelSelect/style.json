@@ -1,0 +1,17 @@
+{
+	"screenPadding": {
+		"padding": 10
+	},
+	"levelSelectTitle": {
+		"textAlign": "center",
+		"fontSize": 22,
+		"marginVertical": 20,
+		"color": "#55b"
+	},
+	"levelBoxesContainer": {
+		"display": "flex",
+		"flexWrap": "wrap",
+		"flexDirection": "row",
+		"justifyContent": "space-between"
+	}
+}

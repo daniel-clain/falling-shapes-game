@@ -2,79 +2,35 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import LevelBox from './../../../components/LevelBox';
 
-export class LevelSelect extends Component {
+const { levels } = require('./levels.json');
+const styles = StyleSheet.create(require('./style.json'));
 
-  static navigationOptions = {
-    title: 'Falling Shapes Game',
-  };
-  
+export default class LevelSelect extends Component {
+  constructor() {
+    super();
+    this.levelSelectHandler = this.levelSelectHandler.bind(this);
+  }
+
+  levelSelectHandler = selectedLevel =>
+    (!selectedLevel.locked &&
+      this.props.navigation.navigate('InGame', { level: selectedLevel }));
+
+  levelBoxes = levels.map(level =>
+    (<LevelBox
+      key={level.name}
+      levelSelectHandler={this.levelSelectHandler}
+      level={level}
+    />));
+
   render() {
-    const levels = [
-      {
-        name: 'Level 1',
-        stars: 3,
-        locked: false,
-      },      
-      {
-        name: 'Level 2',
-        stars: 0,
-        locked: true,
-      },
-      {
-        name: 'Level 3',
-        stars: 0,
-        locked: true,
-      },
-      {
-        name: 'Level 4',
-        stars: 0,
-        locked: true,
-      },      
-      {
-        name: 'Level 5',
-        stars: 0,
-        locked: true,
-      },
-      {
-        name: 'Level 6',
-        stars: 0,
-        locked: true,
-      }
-    ];
-    
-    const levelBoxClicked = level => {
-      if(level.locked) return;
-      this.props.navigation.navigate('InGame', {level: level})
-    };
-
-    const levelBoxes = levels.map((level, index) => 
-      <LevelBox key={index} levelSelectHandler={levelBoxClicked} level={level} />
-    )
-
-
     return (
       <View style={styles.screenPadding}>
         <Text style={styles.levelSelectTitle}>Level Select</Text>
-        <View style={styles.levelBoxesContainer}>{levelBoxes}</View>
-      </View>
-    );
+        <View style={styles.levelBoxesContainer}>{this.levelBoxes}</View>
+      </View>);
   }
 }
 
-const styles = StyleSheet.create({
-  screenPadding: {
-    padding: 10
-  },
-  levelSelectTitle: {
-    textAlign: 'center',
-    fontSize: 22,
-    marginVertical: 20,
-    color: '#55b'
-  },
-  levelBoxesContainer:{
-    display: 'flex',
-    flexWrap: 'wrap',
-    flexDirection: 'row',
-    justifyContent: 'space-between'
-  }
-})
+LevelSelect.navigationOptions = {
+  title: 'Falling Shapes Game',
+};

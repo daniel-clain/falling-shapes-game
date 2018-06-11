@@ -1,2 +1,2 @@
-import { LaneArea } from './LaneArea'
-export default LaneArea;
+export default from './LaneArea';
+

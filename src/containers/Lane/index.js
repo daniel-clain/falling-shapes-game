@@ -1,2 +1,1 @@
-import Lane from './Lane.js';
-export default Lane;
+export default from './Lane';

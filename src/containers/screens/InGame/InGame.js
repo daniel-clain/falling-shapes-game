@@ -1,62 +1,111 @@
+
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import PropTypes from 'prop-types';
+import { StyleSheet, View } from 'react-native';
 import LaneArea from '../../LaneArea';
+import StatsBar from './../../StatsBar';
 import InstructionsModal from '../../InstructionsModal';
+import ShapeDispenser from '../../../components/ShapeDispenser';
+import ShapeCollector from '../../../components/ShapeCollector';
 
-export class InGame extends Component {  
-  level;
+let styles;
 
-  constructor(props){
+export default class InGame extends Component {
+  constructor(props) {
     super(props);
-    if(props.navigation){
-      this.level = props.navigation.getParam('level')
+    this.level = props.navigation.state.params.level;
+    this.state = {
+      isGameRunning: false,
+      showInstructionsModal: true,
+    };
+    this.shapeDispensed = this.shapeDispensed.bind(this);
+
+    this.props.navigation.addListener('willBlur', () => this.exitingGame());
+    this.shapeConfigObj = {
+      shapeFallSpeed: this.level.shapeFallSpeed,
+      shapeTypes: this.level.shapeTypes,
+      shapeColors: this.level.shapeColors,
+    };
+  }
+
+  exitingGame() {
+    this.setState({ isGameRunning: false });
+  }
+
+  startGame = () => {
+    this.setState({ showInstructionsModal: false });
+    this.setState({ isGameRunning: true });
+  }
+
+  shapeCollectionHandler(effect) {
+    this.statsBarRef.statsUpdate(effect);
+  }
+
+  shapePassingThroughCollectionZone(shape, lane) {
+    this.laneAreaRef.shapeEntersCollectionZone(shape, lane);
+  }
+
+  shapeDispensed(dispensedShape, dispensedLane) {
+    if (this.state.isGameRunning) {
+      this.laneAreaRef.newShapeDispensedInLane(dispensedShape, dispensedLane);
     }
   }
-
-  static navigationOptions = ({ navigation }) => ({
-      title: navigation.state.params.level.name,
-      gesturesEnabled: false
-  });
-
-  static propTypes = {
-    shapeTypes: PropTypes.arrayOf(PropTypes.string),
-    shapeColors: PropTypes.arrayOf(PropTypes.string),
-    shapeFallSpeed: PropTypes.number,
-    shapeDispenseSpeed: PropTypes.number,
-    startingTime: PropTypes.number,
-    pointsForOneStar: PropTypes.number,
-    pointsForTwoStars: PropTypes.number,
-    pointsForThreeStars: PropTypes.number,
-    levelInstructions: PropTypes.arrayOf(PropTypes.string),
-    highScoreToBeat: PropTypes.number,
-  }
-  static defaultProps = { 
-    shapeTypes: ['triangle','circle','square','star'],
-    shapeColors: ['yellow', 'red', 'blue', 'green'],
-    shapeFallSpeed: 100,
-    shapeDispenseSpeed: 100,
-    startingTime: 60,
-    levelInstructions: ['Play for as long as you can to see if you can get a high score'],
-    highScoreToBeat: 0, 
-  };
 
   render() {
     return (
       <View style={styles.inGame}>
-        <InstructionsModal/>
-        <LaneArea/>
+        { this.state.showInstructionsModal &&
+          <View style={styles.modalContainer}>
+            <InstructionsModal
+              instructions={this.level.levelInstructions}
+              startGameHandler={this.startGame}
+            />
+          </View>
+        }
+        <StatsBar
+          inGameReference={(ref) => { this.statsBarRef = ref; }}
+        />
+
+        <ShapeDispenser
+          shapeConfigObj={this.shapeConfigObj}
+          shapeDispensedHandler={this.shapeDispensed}
+          shapeDispenseSpeed={this.level.shapeDispenseSpeed}
+          isDoingDispenseRandomShapesLoop={this.state.isGameRunning}
+        />
+        <LaneArea
+          shapePassingThroughCollectionZoneHandler={this.shapePassingThroughCollectionZone}
+          inGameReference={(ref) => { this.laneAreaRef = ref; }}
+        />
+        <ShapeCollector
+          shapeCollectedHandler={this.shapeCollectionHandler}
+        />
+
       </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
+styles = StyleSheet.create({
   inGame: {
     padding: 10,
     flex: 1,
     backgroundColor: '#222',
-    flexDirection: 'column'
-  }
-})
-
+    flexDirection: 'column',
+  },
+  modalContainer: {
+    position: 'absolute',
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0,
+    zIndex: 100,
+    flex: 1,
+    display: 'flex',
+    backgroundColor: 'rgba(52, 52, 52, 0.8)',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+  },
+});
+InGame.navigationOptions = ({ navigation }) => ({
+  title: navigation.state.params.name,
+  gesturesEnabled: false,
+});
