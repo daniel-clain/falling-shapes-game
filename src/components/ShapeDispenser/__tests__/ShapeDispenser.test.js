@@ -96,11 +96,15 @@ describe('ShapeDispenser', () => {
     });
 
     describe('after waiting 10 seconds', () => {
+      const wrapper2 = shallow(<ShapeDispenser {...testProps} />);
+      const instance2 = wrapper2.instance();
+      const dispenseRandomShapeSpy2 = jest.spyOn(instance2, 'dispenseRandomShape');
+      instance2.resetDispenseRandomShapeLoop();
       it('should have been called 3 additional times', (done) => {
         // instance.dispenseRandomShape();
         // dispenseRandomShapeSpy.mockClear();
         setTimeout(() => {
-          expect(dispenseRandomShapeSpy).toHaveBeenCalledTimes(3);
+          expect(dispenseRandomShapeSpy2).toHaveBeenCalledTimes(3);
           resetDispenseRandomShapeLoop(done);
         }, 10000);
         jest.advanceTimersByTime(10000);

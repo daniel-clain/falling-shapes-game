@@ -9,11 +9,15 @@ export default class ShapeDispenser extends Component {
   constructor(props) {
     super(props);
     this.shapesDispensedCount = 0;
+
+    this.dispenseRandomShape = this.dispenseRandomShape.bind(this);
   }
 
   componentDidUpdate() {
+    clearInterval(this.dispenseLoop);
     if (this.props.isDoingDispenseRandomShapesLoop) {
-      this.dispenseRandomShape();
+      this.dispenseLoop = setInterval(this.props.isDoingDispenseRandomShapesLoop &&
+        this.dispenseRandomShape, 3000);
     }
   }
 
@@ -33,7 +37,6 @@ export default class ShapeDispenser extends Component {
 
   dispenseRandomShape() {
     this.shapesDispensedCount += 1;
-
     const randomColor = this.getRandomColor();
     const randomShape = this.getRandomShape();
 
@@ -48,10 +51,6 @@ export default class ShapeDispenser extends Component {
     const randomLane = Math.floor((Math.random() * 3) + 1);
 
     this.props.shapeDispensedHandler(newRandomShape, randomLane);
-    console.log('this.props.isDoingDispenseRandomShapesLoop: ', this.props.isDoingDispenseRandomShapesLoop);
-    if (this.props.isDoingDispenseRandomShapesLoop) {
-      setTimeout(() => this.dispenseRandomShape(), this.props.shapeDispenseSpeed * 1000);
-    }
   }
 
   render() {
